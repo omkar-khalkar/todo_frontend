@@ -12,11 +12,11 @@ const App = () => {
 
  useEffect(() => {
   fetchTodos();
-}, [fetchTodos]);
+}, []);
 
 useEffect(() => {
   fetchFilteredTodos(filter);
-}, [filter, fetchFilteredTodos]);
+}, [filter]);
 
 
   const handleFilterChange = (newFilter) => {
