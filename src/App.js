@@ -10,10 +10,12 @@ const App = () => {
   const [searchQuery, setSearchQuery] = useState('');
   const [filter, setFilter] = useState('all'); // 
 
- useEffect(() => {
+// eslint-disable-next-line react-hooks/exhaustive-deps
+useEffect(() => {
   fetchTodos();
 }, []);
 
+// eslint-disable-next-line react-hooks/exhaustive-deps
 useEffect(() => {
   fetchFilteredTodos(filter);
 }, [filter]);
