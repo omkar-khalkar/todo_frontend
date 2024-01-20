@@ -10,14 +10,14 @@ const App = () => {
   const [searchQuery, setSearchQuery] = useState('');
   const [filter, setFilter] = useState('all'); // 
 
-  useEffect(() => {
-    fetchTodos();
-  }, []);
+ useEffect(() => {
+  fetchTodos();
+}, [fetchTodos]);
 
-  useEffect(() => {
-    
-    fetchFilteredTodos(filter);
-  }, [filter]);
+useEffect(() => {
+  fetchFilteredTodos(filter);
+}, [filter, fetchFilteredTodos]);
+
 
   const handleFilterChange = (newFilter) => {
     setFilter(newFilter);
